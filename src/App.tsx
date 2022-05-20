@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button from "./components/Button/Button";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button
+        btnBgColor="tomato"
+        btnTxtColor="white"
+        btnHeight="50px"
+        btnWidth="200px"
+        btnBorderRadius="15px"
+        btnBorder="none"
+        btnBorderColor="black"
+        btnBorderWidth="1px"
+        btnTxtlabel="Press Me"
+        onClick={() => console.log("You clicked on the Button!")}
+      />
     </div>
   );
 }
