@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
-  btnBgColor: string;
+  btnBgColor?: string;
   btnTxtColor: string;
   btnHeight: string;
   btnWidth: string;
