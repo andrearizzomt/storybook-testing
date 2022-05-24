@@ -27,8 +27,9 @@ export const ButtonGroup: React.FC<ButtonGroupProps> = (props) => {
       {props.buttons.map((button) => (
         <ThemedButton
           primary={false}
-          btnHeight="50px"
-          btnWidth="150px"
+          size="small"
+          // btnHeight="50px"
+          // btnWidth="150px"
           btnBorderRadius="10px"
         >
           {button.label}

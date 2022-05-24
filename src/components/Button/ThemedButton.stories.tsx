@@ -1,3 +1,4 @@
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ThemedButton } from "./ThemedButton";
 
 export default {
@@ -6,10 +7,15 @@ export default {
 
   argTypes: {
     primary: { control: "boolean", defaultValue: true },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "radio" },
+      defaultValue: "small",
+    },
     btnBgColor: { control: "color" },
     btnTxtColor: { control: "color", defaultValue: "black" },
-    btnHeight: { control: "text", defaultValue: "50px" },
-    btnWidth: { control: "text", defaultValue: "150px" },
+    btnHeight: { control: "text" },
+    btnWidth: { control: "text" },
     btnBorderRadius: { control: "text", defaultValue: "10px" },
     btnBorder: {
       options: [
@@ -30,6 +36,38 @@ export default {
     btnBorderColor: { control: "color", defaultValue: "black" },
     btnBorderWidth: { control: "text", defaultValue: "2px" },
   },
+} as ComponentMeta<typeof ThemedButton>;
+
+// export const DefaultThemedButton = (args) => <ThemedButton {...args} />;
+
+const Template: ComponentStory<typeof ThemedButton> = (args) => (
+  <ThemedButton {...args} />
+);
+
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
 };
 
-export const DefaultThemedButton = (args: any) => <ThemedButton {...args} />;
+export const NotPrimary = Template.bind({});
+NotPrimary.args = {
+  primary: false,
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  primary: false,
+  size: "small",
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  primary: false,
+  size: "medium",
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  primary: false,
+  size: "large",
+};

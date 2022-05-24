@@ -51,6 +51,49 @@ function App() {
       <br />
 
       <ButtonGroup buttons={[{ label: "Button 1" }, { label: "Button 2" }]} />
+
+      <br />
+      <br />
+
+      <ThemedButton
+        primary={false}
+        size="small"
+        btnBorderRadius="10px"
+        btnBorder="solid"
+        btnBorderColor="black"
+        btnBorderWidth="2px"
+        onClick={() => console.log("You clicked on a Small Button!")}
+      >
+        Small Button
+      </ThemedButton>
+      <br />
+      <br />
+
+      <ThemedButton
+        primary={false}
+        size="medium"
+        btnBorderRadius="10px"
+        btnBorder="solid"
+        btnBorderColor="black"
+        btnBorderWidth="2px"
+        onClick={() => console.log("You clicked on a Medium Button!")}
+      >
+        Medium Button
+      </ThemedButton>
+      <br />
+      <br />
+
+      <ThemedButton
+        primary={false}
+        size="large"
+        btnBorderRadius="10px"
+        btnBorder="solid"
+        btnBorderColor="black"
+        btnBorderWidth="2px"
+        onClick={() => console.log("You clicked on a Large Button!")}
+      >
+        Large Button
+      </ThemedButton>
     </div>
   );
 }
